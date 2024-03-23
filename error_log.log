@@ -1,0 +1,178 @@
+listening on http://0.0.0.0:3000
+Errors: [
+    NotFound,
+]
+Errors: [
+    NotFound,
+]
+thread '<unnamed>' panicked at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/leptos_reactive-0.6.9/src/context.rs:316:9:
+Location { file: "/home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/leptos_axum-0.6.9/src/lib.rs", line: 306, col: 31 } expected context of type "leptos_axum::ResponseOptions" to be present
+stack backtrace:
+   0:     0x5925282955c5 - std::backtrace_rs::backtrace::libunwind::trace::h78f4e9a1eb03772b
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/std/src/../../backtrace/src/backtrace/libunwind.rs:105:5
+   1:     0x5925282955c5 - std::backtrace_rs::backtrace::trace_unsynchronized::h3a38e307e09f41a8
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/std/src/../../backtrace/src/backtrace/mod.rs:66:5
+   2:     0x5925282955c5 - std::sys_common::backtrace::_print_fmt::he3d0e690b8551c2a
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/std/src/sys_common/backtrace.rs:68:5
+   3:     0x5925282955c5 - <std::sys_common::backtrace::_print::DisplayBacktrace as core::fmt::Display>::fmt::h1fad2a971ec36506
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/std/src/sys_common/backtrace.rs:44:22
+   4:     0x5925282be6db - core::fmt::rt::Argument::fmt::h7012a9e731998987
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/core/src/fmt/rt.rs:142:9
+   5:     0x5925282be6db - core::fmt::write::h93b67068392b644b
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/core/src/fmt/mod.rs:1153:17
+   6:     0x592528292e4f - std::io::Write::write_fmt::he9d9e4eda6dbe3e6
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/std/src/io/mod.rs:1843:15
+   7:     0x59252829539e - std::sys_common::backtrace::_print::h476d4a31909fadf9
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/std/src/sys_common/backtrace.rs:47:5
+   8:     0x59252829539e - std::sys_common::backtrace::print::h1fb17543fdb8f09d
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/std/src/sys_common/backtrace.rs:34:9
+   9:     0x592528296b39 - std::panicking::default_hook::{{closure}}::h6fc8d175caf3dd11
+  10:     0x5925282968a3 - std::panicking::default_hook::h29dd20611e406ef6
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/std/src/panicking.rs:292:9
+  11:     0x592528296fd6 - std::panicking::rust_panic_with_hook::h1aef15bad4c9dc6b
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/std/src/panicking.rs:779:13
+  12:     0x592528296eb6 - std::panicking::begin_panic_handler::{{closure}}::h820c595fe343fedf
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/std/src/panicking.rs:657:13
+  13:     0x592528295a89 - std::sys_common::backtrace::__rust_end_short_backtrace::h5f5dad5c075b596d
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/std/src/sys_common/backtrace.rs:171:18
+  14:     0x592528296be7 - rust_begin_unwind
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/std/src/panicking.rs:645:5
+  15:     0x5925275806c6 - core::panicking::panic_fmt::hd12a49b253347127
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/core/src/panicking.rs:72:14
+  16:     0x592527753cbf - leptos_reactive::context::expect_context::{{closure}}::h4adab8e6d4a91d9e
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/leptos_reactive-0.6.9/src/context.rs:316:9
+  17:     0x592527588bc5 - core::option::Option<T>::unwrap_or_else::h50fae46f422a2eb9
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/core/src/option.rs:977:21
+  18:     0x592527753bb3 - leptos_reactive::context::expect_context::hb2422d07533eed92
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/leptos_reactive-0.6.9/src/context.rs:315:5
+  19:     0x59252770d62b - leptos_axum::handle_server_fns_inner::{{closure}}::{{closure}}::{{closure}}::hc9c48fa728e0a454
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/leptos_axum-0.6.9/src/lib.rs:306:31
+  20:     0x592527678680 - <futures_util::abortable::Abortable<Fut> as core::future::future::Future>::poll::{{closure}}::h6202111ab3060d17
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-util-0.3.30/src/abortable.rs:170:37
+  21:     0x592527677854 - futures_util::abortable::Abortable<T>::try_poll::h43d522f20daa120a
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-util-0.3.30/src/abortable.rs:144:33
+  22:     0x592527678563 - <futures_util::abortable::Abortable<Fut> as core::future::future::Future>::poll::hb74193d26dc2fcbf
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-util-0.3.30/src/abortable.rs:170:9
+  23:     0x59252761b77d - tokio_util::task::spawn_pinned::LocalPool::spawn_pinned::{{closure}}::{{closure}}::{{closure}}::h82aea5992a70b68f
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-util-0.7.10/src/task/spawn_pinned.rs:238:88
+  24:     0x5925275cd579 - tokio::runtime::task::core::Core<T,S>::poll::{{closure}}::h01b9ac355fd8cbda
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/runtime/task/core.rs:328:17
+  25:     0x5925275cad76 - tokio::loom::std::unsafe_cell::UnsafeCell<T>::with_mut::hb22a6eb2a7cc57ad
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/loom/std/unsafe_cell.rs:16:9
+  26:     0x5925275cad76 - tokio::runtime::task::core::Core<T,S>::poll::h415958e90d4ff67d
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/runtime/task/core.rs:317:13
+  27:     0x59252768798b - tokio::runtime::task::harness::poll_future::{{closure}}::h7cdf9019514a4c47
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/runtime/task/harness.rs:485:19
+  28:     0x5925276cf9c8 - <core::panic::unwind_safe::AssertUnwindSafe<F> as core::ops::function::FnOnce<()>>::call_once::hce5e9577fdcc30cd
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/core/src/panic/unwind_safe.rs:272:9
+  29:     0x592527731821 - std::panicking::try::do_call::h486d51f81dca4122
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/std/src/panicking.rs:552:40
+  30:     0x59252773a8fb - __rust_try
+  31:     0x59252772bb08 - std::panicking::try::h6a4588f03c26360e
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/std/src/panicking.rs:516:19
+  32:     0x59252759212d - std::panic::catch_unwind::h59eb9547d870b779
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/std/src/panic.rs:146:14
+  33:     0x592527685ed0 - tokio::runtime::task::harness::poll_future::hf3122480bb62ec6a
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/runtime/task/harness.rs:473:18
+  34:     0x59252768913b - tokio::runtime::task::harness::Harness<T,S>::poll_inner::h0292c03c57f5db61
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/runtime/task/harness.rs:208:27
+  35:     0x592527691ef3 - tokio::runtime::task::harness::Harness<T,S>::poll::h10d8a85af043d374
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/runtime/task/harness.rs:153:15
+  36:     0x59252777007b - tokio::runtime::task::raw::poll::hf6bf4fad4cfed975
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/runtime/task/raw.rs:271:5
+  37:     0x5925281d60b7 - tokio::runtime::task::raw::RawTask::poll::he3eeaca639f692b3
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/runtime/task/raw.rs:201:18
+  38:     0x59252824a622 - tokio::runtime::task::LocalNotified<S>::run::h2511c4b670422a4b
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/runtime/task/mod.rs:416:9
+  39:     0x5925281df8ab - tokio::task::local::LocalSet::tick::{{closure}}::he8bb5b25e82e7280
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/task/local.rs:676:63
+  40:     0x5925281df7ef - tokio::runtime::coop::with_budget::h0343f4701e556ea5
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/runtime/coop.rs:107:5
+  41:     0x5925281df7ef - tokio::runtime::coop::budget::ha5fc0fa987bb06bf
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/runtime/coop.rs:73:5
+  42:     0x5925281df7ef - tokio::task::local::LocalSet::tick::h47c95cfe3994b539
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/task/local.rs:676:31
+  43:     0x5925281317d3 - <tokio::task::local::RunUntil<T> as core::future::future::Future>::poll::{{closure}}::h81de5b79d7eddc6e
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/task/local.rs:982:16
+  44:     0x59252812fde4 - tokio::task::local::LocalSet::with::{{closure}}::h9c4cc259e0dfb4b1
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/task/local.rs:730:13
+  45:     0x59252812ee54 - std::thread::local::LocalKey<T>::try_with::hbefbc0c16732f48a
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/std/src/thread/local.rs:284:16
+  46:     0x59252812dffb - std::thread::local::LocalKey<T>::with::h78e92e61e87578d0
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/std/src/thread/local.rs:260:9
+  47:     0x59252812fd37 - tokio::task::local::LocalSet::with::h91f183c5618150a3
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/task/local.rs:728:9
+  48:     0x5925281316c7 - <tokio::task::local::RunUntil<T> as core::future::future::Future>::poll::hd047092f50379bb5
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/task/local.rs:968:9
+  49:     0x59252813009d - tokio::task::local::LocalSet::run_until::{{closure}}::h5dcc168ea6cfa416
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/task/local.rs:635:19
+  50:     0x59252813b2f8 - <core::pin::Pin<P> as core::future::future::Future>::poll::hde15a2c5d22aac2e
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/core/src/future/future.rs:123:9
+  51:     0x59252812a1f6 - tokio::runtime::scheduler::current_thread::CoreGuard::block_on::{{closure}}::{{closure}}::{{closure}}::h11979095dfaa508e
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/runtime/scheduler/current_thread/mod.rs:659:57
+  52:     0x592528129f32 - tokio::runtime::coop::with_budget::hc318b3a1468b3439
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/runtime/coop.rs:107:5
+  53:     0x592528129f32 - tokio::runtime::coop::budget::h11c9ab764dbc183d
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/runtime/coop.rs:73:5
+  54:     0x592528129f32 - tokio::runtime::scheduler::current_thread::CoreGuard::block_on::{{closure}}::{{closure}}::h9e5148b3f13849cc
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/runtime/scheduler/current_thread/mod.rs:659:25
+  55:     0x5925281277b0 - tokio::runtime::scheduler::current_thread::Context::enter::h9b2601f2b11723b3
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/runtime/scheduler/current_thread/mod.rs:404:19
+  56:     0x592528128e07 - tokio::runtime::scheduler::current_thread::CoreGuard::block_on::{{closure}}::h555d67b8267b24be
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/runtime/scheduler/current_thread/mod.rs:658:36
+  57:     0x592528128a4f - tokio::runtime::scheduler::current_thread::CoreGuard::enter::{{closure}}::h24e20eca53a2bd0f
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/runtime/scheduler/current_thread/mod.rs:737:68
+  58:     0x5925281349ff - tokio::runtime::context::scoped::Scoped<T>::set::hcea7e9dcc47dce86
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/runtime/context/scoped.rs:40:9
+  59:     0x59252812ccad - tokio::runtime::context::set_scheduler::{{closure}}::h244be03e08a41145
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/runtime/context.rs:176:26
+  60:     0x59252812f1eb - std::thread::local::LocalKey<T>::try_with::hd34d2211e1d19812
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/std/src/thread/local.rs:284:16
+  61:     0x59252812e08e - std::thread::local::LocalKey<T>::with::hcca6792cde1c0f84
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/std/src/thread/local.rs:260:9
+  62:     0x59252812cbd1 - tokio::runtime::context::set_scheduler::h03d85060804ebe6d
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/runtime/context.rs:176:9
+  63:     0x5925281283c4 - tokio::runtime::scheduler::current_thread::CoreGuard::enter::h195219286c638e4d
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/runtime/scheduler/current_thread/mod.rs:737:27
+  64:     0x592528128b2e - tokio::runtime::scheduler::current_thread::CoreGuard::block_on::h972d64acfe4b4568
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/runtime/scheduler/current_thread/mod.rs:646:19
+  65:     0x592528126bb1 - tokio::runtime::scheduler::current_thread::CurrentThread::block_on::{{closure}}::ha0fadc23d2192ea3
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/runtime/scheduler/current_thread/mod.rs:175:28
+  66:     0x5925281305a2 - tokio::runtime::context::runtime::enter_runtime::h20c94e8abd13a50a
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/runtime/context/runtime.rs:65:16
+  67:     0x592528126628 - tokio::runtime::scheduler::current_thread::CurrentThread::block_on::h63d2e0ffac90a286
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/runtime/scheduler/current_thread/mod.rs:167:9
+  68:     0x592528137d85 - tokio::runtime::runtime::Runtime::block_on::he90c141564afb28c
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/runtime/runtime.rs:348:47
+  69:     0x59252812fe82 - tokio::task::local::LocalSet::block_on::ha04b53305aa1a788
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-1.36.0/src/task/local.rs:592:9
+  70:     0x59252812dac6 - tokio_util::task::spawn_pinned::LocalWorkerHandle::run::h4b2eba11c2dfa975
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-util-0.7.10/src/task/spawn_pinned.rs:396:9
+  71:     0x59252812da00 - tokio_util::task::spawn_pinned::LocalWorkerHandle::new_worker::{{closure}}::hc8645fd95e7ec6bd
+                               at /home/jaredsolomon/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-util-0.7.10/src/task/spawn_pinned.rs:381:31
+  72:     0x592528138266 - std::sys_common::backtrace::__rust_begin_short_backtrace::h300ad56709ddb5cc
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/std/src/sys_common/backtrace.rs:155:18
+  73:     0x592528135fc1 - std::thread::Builder::spawn_unchecked_::{{closure}}::{{closure}}::h1ccf7715aaa0c042
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/std/src/thread/mod.rs:528:17
+  74:     0x592528131901 - <core::panic::unwind_safe::AssertUnwindSafe<F> as core::ops::function::FnOnce<()>>::call_once::hee4c0244fff7a6f1
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/core/src/panic/unwind_safe.rs:272:9
+  75:     0x59252812f447 - std::panicking::try::do_call::h73a71317ab0f05c9
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/std/src/panicking.rs:552:40
+  76:     0x5925281318bb - __rust_try
+  77:     0x59252812f3b2 - std::panicking::try::h8ed34fa6bcad019c
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/std/src/panicking.rs:516:19
+  78:     0x592528135de1 - std::panic::catch_unwind::h416b4515fb9b3055
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/std/src/panic.rs:146:14
+  79:     0x592528135de1 - std::thread::Builder::spawn_unchecked_::{{closure}}::h6155d1563e2dc4b7
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/std/src/thread/mod.rs:527:30
+  80:     0x592528131abf - core::ops::function::FnOnce::call_once{{vtable.shim}}::h73408f5cb2ddaa69
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/core/src/ops/function.rs:250:5
+  81:     0x592528299369 - <alloc::boxed::Box<F,A> as core::ops::function::FnOnce<Args>>::call_once::hb3b7a92ba6819109
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/alloc/src/boxed.rs:2015:9
+  82:     0x592528299369 - <alloc::boxed::Box<F,A> as core::ops::function::FnOnce<Args>>::call_once::hbb9c447d7e0122c8
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/alloc/src/boxed.rs:2015:9
+  83:     0x592528299369 - std::sys::pal::unix::thread::Thread::new::thread_start::h7868674606c7eb25
+                               at /rustc/85e449a3237e82c9ade8936a82bd4fc64cfe1057/library/std/src/sys/pal/unix/thread.rs:108:17
+  84:     0x734ad616fac3 - <unknown>
+  85:     0x734ad6201850 - <unknown>
+  86:                0x0 - <unknown>

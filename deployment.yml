@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: runtime-dispose-repro-deployment
+  labels:
+    app: runtime-dispose-repro
+spec:
+  selector:
+    matchLabels:
+      app: runtime-dispose-repro
+  template:
+    metadata:
+      labels:
+        app: runtime-dispose-repro
+    spec:
+      containers:
+        - name: runtime-dispose-repro
+          image: localhost:32000/runtime-dispose-repro:registry-1
+          imagePullPolicy: Always
+          resources:
+            limits:
+              cpu: "0.4" # Maximum of 1 CPU core
+              memory: "256Mi" # Maximum of 512 MiB
+            requests:
+              cpu: "0.1" # Desired CPU allocation
+              memory: "256Mi" # Desired memory allocation
+          ports:
+            - containerPort: 3000
+          env:
+            - name: LEPTOS_SITE_ADDR
+              value: "0.0.0.0:3000"
+            - name: LEPTOS_SITE_ROOT
+              value: "site"
+            - name: LEPTOS_SITE_PKG_DIR
+              value: "pkg"
+            - name: RUST_BACKTRACE
+              value: "full"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: runtime-dispose-repro-service
+spec:
+  selector:
+    app: runtime-dispose-repro
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
